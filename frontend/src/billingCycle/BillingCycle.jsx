@@ -9,6 +9,7 @@ import TabsHeader from '../commom/tab/TabsHeader.jsx'
 import TabHeader from '../commom/tab/TabHeader.jsx'
 import TabsContent from '../commom/tab/TabsContent.jsx'
 import TabContent from '../commom/tab/TabContent.jsx'
+import List from './BillingCycleList.jsx'
 
 class BillingCycle extends Component{
     componentWillMount(){
@@ -30,7 +31,7 @@ class BillingCycle extends Component{
                         </TabsHeader>
                         <TabsContent>
                             <TabContent id="tabList">
-                                <h1>Lista</h1>
+                                <List/>
                             </TabContent>
                             <TabContent id="tabCreate">
                                 <h1>Incluir</h1>
