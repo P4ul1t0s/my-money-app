@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Content from '../commom/template/Content.jsx'
-import ContentHeader from '../commom/template/ContentHeader.jsx'
-import ValueBox from '../commom/widget/ValueBox.jsx'
+import Content from '../common/template/Content.jsx'
+import ContentHeader from '../common/template/ContentHeader.jsx'
+import ValueBox from '../common/widget/ValueBox.jsx'
 import axios from "axios";
 const BASE_URL = 'http://localhost:3003/api'
 

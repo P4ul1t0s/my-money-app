@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { connect, Connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getSummary } from './dashboardActions.js'
-import Content from '../commom/template/Content.jsx'
-import ContentHeader from '../commom/template/ContentHeader.jsx'
-import ValueBox from '../commom/widget/ValueBox.jsx'
+import Content from '../common/template/Content.jsx'
+import ContentHeader from '../common/template/ContentHeader.jsx'
+import ValueBox from '../common/widget/ValueBox.jsx'
 
 class Dashboard extends Component{
     componentWillMount(){
