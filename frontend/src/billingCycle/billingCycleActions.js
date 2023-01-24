@@ -7,17 +7,25 @@ const BASE_URL = 'http://localhost:3003/api'
 const INITIAL_VALUES = {}
 
 export function getList(){
-    const request = axios.get(`${BASE_URL}/billingCycles`)
-
     return{
         type: 'BILLING_CYCLES_FETCHED',
-        payload: request
+        payload: axios.get(`${BASE_URL}/billingCycles`)
     }
 }
 
 export function create(values){
+    return submit(values, 'post')
+}
+
+export function update(values){
+    return submit(values, 'put')
+}
+
+function submit(values, method){
     return dispatch => {
-        axios.post(`${BASE_URL}/billingCycles`, values)
+        const id = values._id ? values._id : ''
+
+        axios[method](`${BASE_URL}/billingCycles/${id}`, values)
         .then(resp => {
             toastr.success('Sucesso', 'Operação realizada com sucesso!')
             dispatch(init())
