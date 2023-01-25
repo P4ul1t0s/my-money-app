@@ -5,6 +5,7 @@ import { getSummary } from './dashboardActions.js'
 import Content from '../common/template/Content.jsx'
 import ContentHeader from '../common/template/ContentHeader.jsx'
 import ValueBox from '../common/widget/ValueBox.jsx'
+import Row from '../common/layout/Row.jsx'
 
 class Dashboard extends Component{
     componentWillMount(){
@@ -18,9 +19,11 @@ class Dashboard extends Component{
             <div>
                 <ContentHeader title="Dashboard" small="Versão 1.0"/>
                 <Content>
-                    <ValueBox cols='12 4' color='green' icon='bank' value={`R$ ${credit}`} text='Total de Crédito'/>
-                    <ValueBox cols='12 4' color='red' icon='credit-card' value={`R$ ${debt}`} text='Total de Débito'/>
-                    <ValueBox cols='12 4' color='purple' icon='money' value={`R$ ${credit - debt}`} text='Valor Consolidado'/>
+                    <Row>
+                        <ValueBox cols='12 4' color='green' icon='bank' value={`R$ ${credit}`} text='Total de Crédito'/>
+                        <ValueBox cols='12 4' color='red' icon='credit-card' value={`R$ ${debt}`} text='Total de Débito'/>
+                        <ValueBox cols='12 4' color='purple' icon='money' value={`R$ ${credit - debt}`} text='Valor Consolidado'/>
+                    </Row>
                 </Content>
             </div>
         )

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { connect, Connect } from "react-redux";
+import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { reduxForm, Field, formValueSelector } from 'redux-form'
 import { init } from "./billingCycleActions.js";
 import LabelAndInput from "../common/form/LabelAndInput.jsx";
 import ItemList from "./ItemList.jsx";
+import Summary from "./Summary.jsx";
 
 class BillingCycleForm extends Component{
     render(){
@@ -37,6 +38,7 @@ class BillingCycleForm extends Component{
                         component={LabelAndInput}
                         placeholder="Informe o ano"
                     />
+                    <Summary credit={1000} debt={100}/>
                     <ItemList
                         field="credits"
                         legend="Créditos"
