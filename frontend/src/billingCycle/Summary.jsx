@@ -24,7 +24,7 @@ export default ({ credit, debt }) => (
                     cols='12 4'
                     color='purple'
                     icon='money'
-                    value={`R$${credit - debt}`}
+                    value={`R$${(credit - debt).toFixed(2)}`}
                     text='Valor Consolidado'
                 />
         </fieldset>
